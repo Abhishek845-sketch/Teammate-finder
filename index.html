@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teammate Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>  <!-- Navigation Bar -->  <nav class="navbar">
+    <a class="logo" href="#">👥 Teammate Finder</a><div class="nav-links">
+  <a href="#home">Home</a>
+  <a href="#teammates">Find Teammates</a>
+  <a href="#join">Join Us</a>
+</div>
+
+  </nav>  <!-- Hero Section -->  <header class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">YOUR NEXT GREAT TEAM STARTS HERE</p>  <h1>Find Your Perfect <span>Teammate</span></h1>
+
+  <p>
+    Connect with like-minded people for hackathons,
+    projects and exciting ideas.
+  </p>
+
+  <a class="button" href="#teammates">Find Teammates</a>
+</div>
+
+<div class="hero-visual">🤝</div>
+
+  </header>  <!-- Teammate Directory -->  <main id="teammates">
+    <section class="directory">  <h2>Meet Your Next Teammates</h2>
+
+  <p class="muted">
+    Find people with the right skills and interests.
+  </p>
+
+  <div class="search-area">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by name, skill or college..."
+    >
+
+    <select id="skillFilter">
+      <option value="">All skills</option>
+      <option value="javascript">JavaScript</option>
+      <option value="python">Python</option>
+      <option value="react">React</option>
+      <option value="design">UI/UX Design</option>
+      <option value="c++">C++</option>
+    </select>
+  </div>
+
+  <!-- Profiles loaded from the backend -->
+  <div id="profileList" class="profile-grid"></div>
+
+  <p id="emptyMessage" class="muted" hidden>
+    No teammates found. Try another search.
+  </p>
+
+</section>
+
+  </main>  <!-- Join Us / Create Profile Section -->  <section class="join-section" id="join"><h2>Join Teammate Finder</h2>
+
+<p class="muted">
+  Create your profile and find people to build amazing projects with.
+</p>
+
+<form id="profileForm">
+
+  <label for="profileName">Your Name</label>
+  <input
+    type="text"
+    id="profileName"
+    name="name"
+    placeholder="Enter your name"
+    required
+  >
+
+  <label for="profileCollege">Your College</label>
+  <input
+    type="text"
+    id="profileCollege"
+    name="college"
+    placeholder="Enter your college"
+    required
+  >
+
+  <label for="profileSkills">Your Skills</label>
+  <input
+    type="text"
+    id="profileSkills"
+    name="skills"
+    placeholder="Example: C++, JavaScript, Python"
+    required
+  >
+
+  <label for="profileBio">Short Bio</label>
+  <textarea
+    id="profileBio"
+    name="bio"
+    placeholder="Tell us about your interests..."
+    rows="4"
+    required
+  ></textarea>
+
+  <button class="button" type="submit">
+    Create My Profile
+  </button>
+
+  <p id="formMessage" role="status" aria-live="polite"></p>
+
+</form>
+
+  </section>  <!-- Footer -->  <footer>
+    <h2>Build Something Amazing Together.</h2><p>Great projects begin with great teammates.</p>
+
+<p class="muted">Teammate Finder · Student Project</p>
+
+  </footer>  <!-- JavaScript -->  <script src="script.js"></script></body>
+</html>
