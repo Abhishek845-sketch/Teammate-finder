@@ -13,7 +13,7 @@ async function loadProfiles() {
   profileList.innerHTML = "<p>Loading teammates...</p>";
 
   try {
-    const response = await fetch("http://localhost:3000/api/teammates");
+    const response = await fetch("https://teammate-finder-yow8.onrender.com/api/teammates");
 
     if (!response.ok) {
       throw new Error("Failed to load teammate profiles.");
@@ -173,7 +173,7 @@ profileForm.addEventListener("submit", async event => {
 
   try {
     const response = await fetch(
-      "http://localhost:3000/api/teammates",
+      "https://teammate-finder-yow8.onrender.com/api/teammates",
       {
         method: "POST",
         headers: {
